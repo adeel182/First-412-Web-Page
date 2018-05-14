@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        
+        
+        
+        <title>The Hub -Welcome </title>
+        <link rel="stylesheet" href="site.css">
+<!--        controls the css div class-->
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+        <style>
+        div.content{
+     
+    background-color: powderblue;
+    text-align: center;
+    display: compact;
+    
+    height: 170px;
+    width: 200px;
+    float: left;
+    border: 10px solid #000000;
+    border-color: powderblue;
+    margin: 40px;
+    align-content: stretch;
+    
+        }
+/*        to control the music div*/
+        div#music{
+            
+        }
+/*        class for the div images*/
+      .image2{
+            width: 100%;
+            margin: auto;
+            
+        }
+        p{
+            font-weight: bold;
+     font-family: 'Dosis' , sans-serif;
+font-style: italic;
+color: gray;
+font-stretch: extra-expanded; 
+        }
+        
+        .middle {
+  transition: .5s ease;
+  opacity: 0;
+/*  position: absolute;*/
+  /*top: auto;*/
+/*  left: 50%;*/
+  
+  transform: translate(-10%, -10%);
+  -ms-transform: translate(-70%, -70%);
+     
+      }
+
+.content:hover .image2 {
+/*  opacity: 0.3;*/
+  
+  opacity:0.3;
+ 
+}
+
+.content:hover .middle {
+  opacity: 1;
+    color: orange;
+}
+
+.text {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+        </style>
+    </head>
+    
+    <body>
+<!--       JQuery for sticky nav bar-->
+        <script> 
+            $(document).ready(function() {
+  var stickyNavTop = $('.nav').offset().top;
+
+  var stickyNav = function(){
+    var scrollTop = $(window).scrollTop();
+
+    if (scrollTop > stickyNavTop) { 
+      $('.nav').addClass('sticky');
+    } else {
+      $('.nav').removeClass('sticky'); 
+    }
+  };
+
+  stickyNav();
+
+  $(window).scroll(function() {
+    stickyNav();
+  });
+});
+</script>
+         
+       
+
+         
+          <ul  class ="sticky" >
+                               
+              <li id="logo-large"> The Hub </li>
+
+          			<li ><a href="index.html">Home</a></li>
+          			<li><a href="NewsLetter.html">News Letter</a></li>
+          			<li><a href="AdedamolaAdetayoResume!.pdf">About</a></li>
+                                
+                                <li id ="badge">  <a href="https://www.facebook.com" class="fa fa-facebook" ></a></li>
+                                <li id = "badge">  <a href="https://www.twitter.com" class="fa fa-twitter" ></a> </li>
+                                <li id ="badge"> <a href="https://www.google.com" class="fa fa-google"></a> </li>
+                                <li id ="badge">  <a href="https://www.linkedin.com/in/adedamola-adetayo-a5a40b130/" class="fa fa-linkedin" ></a> </li>
+          			
+          		</ul>
+
+        
+
+        
+         <img src ="hub.jpg" class = "main">
+        
+         <div class="content" onclick = "location.href ='https://www.billboard.com/charts/hot-100';" style="cursor:pointer"> 
+             <p>  Music </p>
+         
+             <img  src ="music.jpg" class="image2">
+             
+              <div class="middle" >
+           <p> Trending Music</p>
+  </div>
+</div>
+         
+        
+         <div class="content" onclick = "location.href ='https://news.google.com/news/?gl=US&ned=us&hl=en';" style="cursor:pointer"> 
+                                        
+             <p> News </p>
+         
+             <img  src ="nes.jpg" class="image2">
+              <div class="middle" >
+           <p> Latest News</p>
+  </div>
+         
+         </div>
+         
+         <div class="content" onclick = "location.href ='http://www.livescore.com/';" style="cursor:pointer"> 
+             
+             <p> Sport </p>
+         <img  src ="sport.jpg" class="image2"> 
+         
+          <div class="middle" >
+           <p> Live Scores</p>
+  </div>
+         
+         </div>
+          <div class="content" onclick = "location.href ='https://techcrunch.com/';" style="cursor:pointer"> 
+             
+              <p> Technology </p>
+         <img  src ="tech2.jpg" class="image2">
+         
+          <div class="middle" >
+           <p> What's new</p>
+  </div>
+         
+         </div>
+       
+    </body>
+</html>
